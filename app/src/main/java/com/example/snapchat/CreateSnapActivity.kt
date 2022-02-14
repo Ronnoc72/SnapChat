@@ -55,9 +55,7 @@ class CreateSnapActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         val selectedImage = data!!.data
-
         if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null) {
             try {
                 val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, selectedImage)
